@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PasswordTextFieldDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,21 @@
 			<true/>
 		</dict>
 		<key>83CBDC2E1C6B07A5006189C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83CBDC421C6B07B4006189C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83CBDC551C6B07B4006189C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83CBDC601C6B07B5006189C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

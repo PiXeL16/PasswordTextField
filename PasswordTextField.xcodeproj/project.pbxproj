@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		839CC82A1C6B09A400531404 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC8291C6B09A400531404 /* StringExtension.swift */; };
 		83CBDC291C6B07A5006189C2 /* PasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 83CBDC281C6B07A5006189C2 /* PasswordTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83CBDC301C6B07A5006189C2 /* PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */; };
 		83CBDC351C6B07A5006189C2 /* PasswordTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC341C6B07A5006189C2 /* PasswordTextFieldTests.swift */; };
+		83CBDC461C6B07B4006189C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC451C6B07B4006189C2 /* AppDelegate.swift */; };
+		83CBDC481C6B07B4006189C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC471C6B07B4006189C2 /* ViewController.swift */; };
+		83CBDC4B1C6B07B4006189C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CBDC491C6B07B4006189C2 /* Main.storyboard */; };
+		83CBDC4D1C6B07B4006189C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CBDC4C1C6B07B4006189C2 /* Assets.xcassets */; };
+		83CBDC501C6B07B4006189C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CBDC4E1C6B07B4006189C2 /* LaunchScreen.storyboard */; };
+		83CBDC5B1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC5A1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift */; };
+		83CBDC661C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC651C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift */; };
+		83CBDC721C6B07C9006189C2 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC711C6B07C9006189C2 /* PasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +29,44 @@
 			remoteGlobalIDString = 83CBDC241C6B07A5006189C2;
 			remoteInfo = PasswordTextField;
 		};
+		83CBDC571C6B07B4006189C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBDC1C1C6B07A5006189C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBDC421C6B07B4006189C2;
+			remoteInfo = PasswordTextFieldDemo;
+		};
+		83CBDC621C6B07B5006189C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBDC1C1C6B07A5006189C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBDC421C6B07B4006189C2;
+			remoteInfo = PasswordTextFieldDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		839CC8291C6B09A400531404 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PasswordTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CBDC281C6B07A5006189C2 /* PasswordTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
 		83CBDC2A1C6B07A5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CBDC2F1C6B07A5006189C2 /* PasswordTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CBDC341C6B07A5006189C2 /* PasswordTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldTests.swift; sourceTree = "<group>"; };
 		83CBDC361C6B07A5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CBDC431C6B07B4006189C2 /* PasswordTextFieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordTextFieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CBDC451C6B07B4006189C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83CBDC471C6B07B4006189C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83CBDC4A1C6B07B4006189C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83CBDC4C1C6B07B4006189C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83CBDC4F1C6B07B4006189C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83CBDC511C6B07B4006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CBDC561C6B07B4006189C2 /* PasswordTextFieldDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTextFieldDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CBDC5A1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDemoTests.swift; sourceTree = "<group>"; };
+		83CBDC5C1C6B07B5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CBDC611C6B07B5006189C2 /* PasswordTextFieldDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTextFieldDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CBDC651C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDemoUITests.swift; sourceTree = "<group>"; };
+		83CBDC671C6B07B5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CBDC711C6B07C9006189C2 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +85,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83CBDC401C6B07B4006189C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBDC531C6B07B4006189C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBDC5E1C6B07B5006189C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		839CC8281C6B099600531404 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				839CC8291C6B09A400531404 /* StringExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		83CBDC1B1C6B07A5006189C2 = {
 			isa = PBXGroup;
 			children = (
 				83CBDC271C6B07A5006189C2 /* PasswordTextField */,
 				83CBDC331C6B07A5006189C2 /* PasswordTextFieldTests */,
+				83CBDC441C6B07B4006189C2 /* PasswordTextFieldDemo */,
+				83CBDC591C6B07B4006189C2 /* PasswordTextFieldDemoTests */,
+				83CBDC641C6B07B5006189C2 /* PasswordTextFieldDemoUITests */,
 				83CBDC261C6B07A5006189C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +134,9 @@
 			children = (
 				83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */,
 				83CBDC2F1C6B07A5006189C2 /* PasswordTextFieldTests.xctest */,
+				83CBDC431C6B07B4006189C2 /* PasswordTextFieldDemo.app */,
+				83CBDC561C6B07B4006189C2 /* PasswordTextFieldDemoTests.xctest */,
+				83CBDC611C6B07B5006189C2 /* PasswordTextFieldDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +144,10 @@
 		83CBDC271C6B07A5006189C2 /* PasswordTextField */ = {
 			isa = PBXGroup;
 			children = (
+				839CC8281C6B099600531404 /* Extensions */,
 				83CBDC281C6B07A5006189C2 /* PasswordTextField.h */,
 				83CBDC2A1C6B07A5006189C2 /* Info.plist */,
+				83CBDC711C6B07C9006189C2 /* PasswordTextField.swift */,
 			);
 			path = PasswordTextField;
 			sourceTree = "<group>";
@@ -84,6 +159,37 @@
 				83CBDC361C6B07A5006189C2 /* Info.plist */,
 			);
 			path = PasswordTextFieldTests;
+			sourceTree = "<group>";
+		};
+		83CBDC441C6B07B4006189C2 /* PasswordTextFieldDemo */ = {
+			isa = PBXGroup;
+			children = (
+				83CBDC451C6B07B4006189C2 /* AppDelegate.swift */,
+				83CBDC471C6B07B4006189C2 /* ViewController.swift */,
+				83CBDC491C6B07B4006189C2 /* Main.storyboard */,
+				83CBDC4C1C6B07B4006189C2 /* Assets.xcassets */,
+				83CBDC4E1C6B07B4006189C2 /* LaunchScreen.storyboard */,
+				83CBDC511C6B07B4006189C2 /* Info.plist */,
+			);
+			path = PasswordTextFieldDemo;
+			sourceTree = "<group>";
+		};
+		83CBDC591C6B07B4006189C2 /* PasswordTextFieldDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				83CBDC5A1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift */,
+				83CBDC5C1C6B07B5006189C2 /* Info.plist */,
+			);
+			path = PasswordTextFieldDemoTests;
+			sourceTree = "<group>";
+		};
+		83CBDC641C6B07B5006189C2 /* PasswordTextFieldDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83CBDC651C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift */,
+				83CBDC671C6B07B5006189C2 /* Info.plist */,
+			);
+			path = PasswordTextFieldDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +242,59 @@
 			productReference = 83CBDC2F1C6B07A5006189C2 /* PasswordTextFieldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		83CBDC421C6B07B4006189C2 /* PasswordTextFieldDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CBDC681C6B07B5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldDemo" */;
+			buildPhases = (
+				83CBDC3F1C6B07B4006189C2 /* Sources */,
+				83CBDC401C6B07B4006189C2 /* Frameworks */,
+				83CBDC411C6B07B4006189C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PasswordTextFieldDemo;
+			productName = PasswordTextFieldDemo;
+			productReference = 83CBDC431C6B07B4006189C2 /* PasswordTextFieldDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83CBDC551C6B07B4006189C2 /* PasswordTextFieldDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CBDC6B1C6B07B5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldDemoTests" */;
+			buildPhases = (
+				83CBDC521C6B07B4006189C2 /* Sources */,
+				83CBDC531C6B07B4006189C2 /* Frameworks */,
+				83CBDC541C6B07B4006189C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83CBDC581C6B07B4006189C2 /* PBXTargetDependency */,
+			);
+			name = PasswordTextFieldDemoTests;
+			productName = PasswordTextFieldDemoTests;
+			productReference = 83CBDC561C6B07B4006189C2 /* PasswordTextFieldDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83CBDC601C6B07B5006189C2 /* PasswordTextFieldDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CBDC6E1C6B07B5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldDemoUITests" */;
+			buildPhases = (
+				83CBDC5D1C6B07B5006189C2 /* Sources */,
+				83CBDC5E1C6B07B5006189C2 /* Frameworks */,
+				83CBDC5F1C6B07B5006189C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83CBDC631C6B07B5006189C2 /* PBXTargetDependency */,
+			);
+			name = PasswordTextFieldDemoUITests;
+			productName = PasswordTextFieldDemoUITests;
+			productReference = 83CBDC611C6B07B5006189C2 /* PasswordTextFieldDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +311,17 @@
 					83CBDC2E1C6B07A5006189C2 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					83CBDC421C6B07B4006189C2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					83CBDC551C6B07B4006189C2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 83CBDC421C6B07B4006189C2;
+					};
+					83CBDC601C6B07B5006189C2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 83CBDC421C6B07B4006189C2;
+					};
 				};
 			};
 			buildConfigurationList = 83CBDC1F1C6B07A5006189C2 /* Build configuration list for PBXProject "PasswordTextField" */;
@@ -160,6 +330,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 83CBDC1B1C6B07A5006189C2;
 			productRefGroup = 83CBDC261C6B07A5006189C2 /* Products */;
@@ -168,6 +339,9 @@
 			targets = (
 				83CBDC241C6B07A5006189C2 /* PasswordTextField */,
 				83CBDC2E1C6B07A5006189C2 /* PasswordTextFieldTests */,
+				83CBDC421C6B07B4006189C2 /* PasswordTextFieldDemo */,
+				83CBDC551C6B07B4006189C2 /* PasswordTextFieldDemoTests */,
+				83CBDC601C6B07B5006189C2 /* PasswordTextFieldDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +361,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83CBDC411C6B07B4006189C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBDC501C6B07B4006189C2 /* LaunchScreen.storyboard in Resources */,
+				83CBDC4D1C6B07B4006189C2 /* Assets.xcassets in Resources */,
+				83CBDC4B1C6B07B4006189C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBDC541C6B07B4006189C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBDC5F1C6B07B5006189C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839CC82A1C6B09A400531404 /* StringExtension.swift in Sources */,
+				83CBDC721C6B07C9006189C2 /* PasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +405,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83CBDC3F1C6B07B4006189C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBDC481C6B07B4006189C2 /* ViewController.swift in Sources */,
+				83CBDC461C6B07B4006189C2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBDC521C6B07B4006189C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBDC5B1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBDC5D1C6B07B5006189C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBDC661C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,7 +438,36 @@
 			target = 83CBDC241C6B07A5006189C2 /* PasswordTextField */;
 			targetProxy = 83CBDC311C6B07A5006189C2 /* PBXContainerItemProxy */;
 		};
+		83CBDC581C6B07B4006189C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83CBDC421C6B07B4006189C2 /* PasswordTextFieldDemo */;
+			targetProxy = 83CBDC571C6B07B4006189C2 /* PBXContainerItemProxy */;
+		};
+		83CBDC631C6B07B5006189C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83CBDC421C6B07B4006189C2 /* PasswordTextFieldDemo */;
+			targetProxy = 83CBDC621C6B07B5006189C2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83CBDC491C6B07B4006189C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83CBDC4A1C6B07B4006189C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83CBDC4E1C6B07B4006189C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83CBDC4F1C6B07B4006189C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		83CBDC371C6B07A5006189C2 /* Debug */ = {
@@ -308,6 +562,7 @@
 		83CBDC3A1C6B07A5006189C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +573,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		83CBDC3B1C6B07A5006189C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -357,6 +614,76 @@
 			};
 			name = Release;
 		};
+		83CBDC691C6B07B5006189C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PasswordTextFieldDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83CBDC6A1C6B07B5006189C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PasswordTextFieldDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		83CBDC6C1C6B07B5006189C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PasswordTextFieldDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordTextFieldDemo.app/PasswordTextFieldDemo";
+			};
+			name = Debug;
+		};
+		83CBDC6D1C6B07B5006189C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PasswordTextFieldDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordTextFieldDemo.app/PasswordTextFieldDemo";
+			};
+			name = Release;
+		};
+		83CBDC6F1C6B07B5006189C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PasswordTextFieldDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PasswordTextFieldDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		83CBDC701C6B07B5006189C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PasswordTextFieldDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PasswordTextFieldDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -376,6 +703,7 @@
 				83CBDC3B1C6B07A5006189C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83CBDC3C1C6B07A5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +712,34 @@
 				83CBDC3E1C6B07A5006189C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBDC681C6B07B5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBDC691C6B07B5006189C2 /* Debug */,
+				83CBDC6A1C6B07B5006189C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBDC6B1C6B07B5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBDC6C1C6B07B5006189C2 /* Debug */,
+				83CBDC6D1C6B07B5006189C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBDC6E1C6B07B5006189C2 /* Build configuration list for PBXNativeTarget "PasswordTextFieldDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBDC6F1C6B07B5006189C2 /* Debug */,
+				83CBDC701C6B07B5006189C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
