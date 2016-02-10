@@ -12,6 +12,13 @@ import UIKit
 @IBDesignable public class PasswordTextField: UITextField {
     
     
+    /**
+     Default initializer for the textfield
+     
+     - parameter frame: frame of the view
+     
+     - returns:
+     */
     public override init(frame: CGRect) {
         
         super.init(frame: frame)
@@ -20,7 +27,13 @@ import UIKit
         
     }
     
-    
+    /**
+     Default initializer for the textfield done from storyboard
+     
+     - parameter coder: coder
+     
+     - returns: 
+     */
     public required init?(coder: NSCoder) {
         
         super.init(coder: coder)
@@ -29,12 +42,15 @@ import UIKit
         
     }
     
+    
+    /**
+     Initialize properties and values
+     */
     func setup()
     {
         
         self.secureTextEntry = true
     }
-    
     
     
     /// retuns if the textfield is secure or not
