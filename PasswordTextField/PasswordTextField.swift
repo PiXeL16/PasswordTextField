@@ -49,13 +49,20 @@ import UIKit
      */
     public func toggleSecureText()
     {
-        
-        self.secureText = !isSecure
+    
+       
+        self.resignFirstResponder()
+        self.secureTextEntry = !isSecure
         
         /// Kind of ugly hack to make the text refresh after the toggle. The size of the secure fonts are different than the normal ones and it shows trailing white space
         let tempText = self.text;
         self.text = " ";
         self.text = tempText;
+        
+        self.textColor = UIColor(white: 0.0, alpha: 1.0)
+        
+        self.becomeFirstResponder()
+        
         
     }
     
