@@ -32,7 +32,7 @@ import UIKit
      
      - parameter coder: coder
      
-     - returns: 
+     - returns:
      */
     public required init?(coder: NSCoder) {
         
