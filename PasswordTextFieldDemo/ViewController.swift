@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     @IBAction func test(sender: AnyObject) {
         
-        passwordTextField.toggleSecureText()
+//        passwordTextField.toggleSecureText()
     }
 
 }
