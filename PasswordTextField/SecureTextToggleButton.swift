@@ -34,10 +34,17 @@ public class SecureTextToggleButton: UIButton {
     }
     
     /// Image to shown when the visibility is on
-    public var visibilityOnImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)!
+    public var showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)!{
+        
+        didSet{
+            self.setImage(showSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
+        }
+            
+    }
     
     /// Image to shown when the visibility is off
-    public var visibilityOffImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)!
+    public var hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)!
+    
     
     /// Tint of the image
     public var imageTint:UIColor = UIColor.grayColor(){
@@ -56,13 +63,13 @@ public class SecureTextToggleButton: UIButton {
      
      - returns:
      */
-    public convenience init(visibilityOnImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)! , visibilityOffImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
+    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
     {
         self.init(frame:CGRectZero)
         
-        self.visibilityOnImage = visibilityOnImage
+        self.showSecureTextImage = showSecureTextImage
         
-        self.visibilityOffImage = visibilityOffImage
+        self.hideSecureTextImage = hideSecureTextImage
 
         self.imageTint = imageTint
     }
@@ -92,7 +99,7 @@ public class SecureTextToggleButton: UIButton {
     {
         
         //Initialize the frame and adds a right margin
-        self.frame = CGRect(x: 0, y: -0, width: visibilityOnImage.size.width+RightMargin, height: visibilityOnImage.size.height)
+        self.frame = CGRect(x: 0, y: -0, width: showSecureTextImage.size.width+RightMargin, height: showSecureTextImage.size.height)
         
         //Sets the tint color
         self.tintColor = imageTint
@@ -114,7 +121,7 @@ public class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOn()
     {
-        self.setImage(visibilityOnImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
+        self.setImage(showSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
     }
     
     
@@ -123,7 +130,7 @@ public class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOff()
     {
-        self.setImage(visibilityOffImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
+        self.setImage(hideSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
     }
     
     /**

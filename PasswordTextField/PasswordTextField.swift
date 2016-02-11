@@ -11,13 +11,30 @@ import UIKit
 //  A custom TextField with a switchable icon which shows or hides the password
 public class PasswordTextField: UITextField {
     
+    //KVO Context
     private var kvoContext: UInt8 = 0
     
+    /// Enums with the values of when to show the secure or insecure text button
+    public enum ShowButtonWhile: String {
+        case Editing = "editing"
+        case Always = "always"
+        
+        var textViewMode: UITextFieldViewMode {
+            switch self{
+            case .Editing:
+                return UITextFieldViewMode.WhileEditing
+            
+            case .Always:
+                return UITextFieldViewMode.Always
+            }
+        }
+    }
+
     
     /**
      Default initializer for the textfield
      
-     - parameter frame: frame of the view
+     - parameter frame: fra me of the view
      
      - returns:
      */
@@ -44,6 +61,68 @@ public class PasswordTextField: UITextField {
         
     }
     
+    /// When to show the button defaults to only when editing
+    public var showButtonWhile = ShowButtonWhile.Editing{
+        
+        didSet{
+             self.rightViewMode = self.showButtonWhile.textViewMode
+        }
+            
+    }
+    
+    
+    @available(*, unavailable, message="This property is reserved for Interface Builder. Use 'showButtonWhile' instead.")
+    @IBInspectable var showToggleButtonWhile: String? {
+        willSet {
+            if let newShow = ShowButtonWhile(rawValue: newValue?.lowercaseString ?? "") {
+                self.showButtonWhile = newShow
+            }
+        }
+    }
+    
+    /**
+     The color of the image.
+     
+     This property applies a color to the image. The default value for this property is gray.
+     */
+    @IBInspectable public var imageTintColor: UIColor = UIColor.grayColor() {
+        didSet {
+            
+            self.secureTextButton.tintColor = imageTintColor
+        }
+    }
+    
+    
+    /**
+     The image to show the secure text
+     */
+    @IBInspectable public var customShowSecureTextImage: UIImage? {
+        
+        didSet{
+            
+            if let image = customShowSecureTextImage
+            {
+                self.secureTextButton.showSecureTextImage = image
+            }
+        }
+    }
+    
+    
+    /**
+     The image to hide the secure text
+     */
+    @IBInspectable public var customHideSecureTextImage: UIImage? {
+        
+        didSet{
+            
+            if let image = customHideSecureTextImage
+            {
+                self.secureTextButton.hideSecureTextImage = image
+            }
+            
+        }
+    }
+    
     
     /**
      Initialize properties and values
@@ -54,24 +133,12 @@ public class PasswordTextField: UITextField {
         self.autocapitalizationType = .None
         self.autocorrectionType = .No
         self.keyboardType = .ASCIICapable
-        self.rightViewMode = .WhileEditing
+        self.rightViewMode = self.showButtonWhile.textViewMode
         self.rightView = self.secureTextButton
         
         self.secureTextButton.addObserver(self, forKeyPath: "isSecure", options: NSKeyValueObservingOptions.New, context: &kvoContext)
     }
     
-    /**
-     The color of the image.
-     
-     This property applies a color to the image. The default value for this property is gray.
-     */
-    @IBInspectable dynamic public var imageTintColor: UIColor = UIColor.grayColor() {
-        didSet {
-            
-            self.secureTextButton.tintColor = imageTintColor
-        }
-    }
-
     
     /// retuns if the textfield is secure or not
     public var isSecure: Bool{
@@ -99,8 +166,6 @@ public class PasswordTextField: UITextField {
         let tempText = self.text;
         self.text = " ";
         self.text = tempText;
-        
-        self.textColor = UIColor(white: 0.0, alpha: 1.0)
         
         self.becomeFirstResponder()
         
