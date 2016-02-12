@@ -77,7 +77,7 @@ public class PasswordTextField: UITextField {
     }
     
     /// The rule to apply to the validation password rule
-    public var validationRule:RegexRule = PasswordRule()
+    public lazy var validationRule:RegexRule = PasswordRule()
     
     
     /**
@@ -163,7 +163,7 @@ public class PasswordTextField: UITextField {
         }
     }
     
-    private lazy var secureTextButton: SecureTextToggleButton = {
+    public lazy var secureTextButton: SecureTextToggleButton = {
         
         return SecureTextToggleButton(imageTint: self.imageTintColor)
         
@@ -172,7 +172,7 @@ public class PasswordTextField: UITextField {
     /**
      Toggle the secure text view or not
      */
-    public func setMode(secure:Bool)
+    public func setSecureMode(secure:Bool)
     {
     
         self.resignFirstResponder()
@@ -221,7 +221,7 @@ public class PasswordTextField: UITextField {
             
             if context == &kvoContext {
                 
-                self.setMode(self.secureTextButton.isSecure)
+                self.setSecureMode(self.secureTextButton.isSecure)
                 
                 
             } else {

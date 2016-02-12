@@ -136,7 +136,7 @@ public class SecureTextToggleButton: UIButton {
     /**
      Toggle the icon
      */
-    func buttonTouch()
+    public func buttonTouch()
     {
         self.isSecure = !self.isSecure
     }
