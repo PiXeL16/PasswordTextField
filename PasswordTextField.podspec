@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PasswordTextField"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "A custom TextField with a switchable icon which shows or hides the password and enforce good password policies"
   s.description  = <<-DESC
     A custom TextField with a switchable icon which shows or hides the password and enforce good password policies, written in Swift
