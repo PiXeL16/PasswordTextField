@@ -63,7 +63,7 @@ public class SecureTextToggleButton: UIButton {
      
      - returns:
      */
-    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
+    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: SecureTextToggleButton.self.classForCoder()), compatibleWithTraitCollection: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: SecureTextToggleButton.self.classForCoder()), compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
     {
         self.init(frame:CGRectZero)
         
