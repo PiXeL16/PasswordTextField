@@ -18,18 +18,17 @@ public class BundleUtil:NSObject{
         
         get{
             
-            let podBundle = NSBundle(forClass: self.classForCoder())
+            //Get the bundle
+            var bundle = NSBundle(forClass: self.classForCoder())
             
-            let bundlePath:String = podBundle.pathForResource("PasswordTextField", ofType: "bundle")!
+            //Trys to load the path to resource(In case we are calling this from the pod)
+            if let bundlePath:String = bundle.pathForResource("PasswordTextField", ofType: "bundle")
+            {
+                //If we get the path to resource, set the bundle path
+                bundle =  NSBundle(path: bundlePath)!
 
-            let bundle:NSBundle = NSBundle(path: bundlePath)!
-            
-//            NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-//            
-//            let bundleURL = podBundle.URLForResource("PasswordTextField.bundle", withExtension: "bundle")!
-//            
-//            let bundle = NSBundle(URL: bundleURL)!
-            
+            }
+
             return bundle
         }
     }
