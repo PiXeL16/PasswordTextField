@@ -17,7 +17,6 @@ public class SecureTextToggleButton: UIButton {
     private let Width:CGFloat = 20.0
     private let Height:CGFloat = 20.0
     
-    
     /// Sets the value for the secure or note secure toggle and
     dynamic public var isSecure:Bool = true{
         
@@ -34,7 +33,7 @@ public class SecureTextToggleButton: UIButton {
     }
     
     /// Image to shown when the visibility is on
-    public var showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)!{
+    public var showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle:BundleUtil.bundle, compatibleWithTraitCollection: nil)!{
         
         didSet{
             self.setImage(showSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
@@ -43,7 +42,7 @@ public class SecureTextToggleButton: UIButton {
     }
     
     /// Image to shown when the visibility is off
-    public var hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: PasswordTextField.self), compatibleWithTraitCollection: nil)!
+    public var hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle:BundleUtil.bundle, compatibleWithTraitCollection: nil)!
     
     
     /// Tint of the image
@@ -63,7 +62,7 @@ public class SecureTextToggleButton: UIButton {
      
      - returns:
      */
-    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle: NSBundle(forClass: SecureTextToggleButton.self.classForCoder()), compatibleWithTraitCollection: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: NSBundle(forClass: SecureTextToggleButton.self.classForCoder()), compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
+    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle:BundleUtil.bundle, compatibleWithTraitCollection: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: BundleUtil.bundle, compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
     {
         self.init(frame:CGRectZero)
         

@@ -18,6 +18,7 @@
 		839CC83D1C6D80B600531404 /* StringExtensionSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC83C1C6D80B600531404 /* StringExtensionSpecs.swift */; };
 		83A6CA941C6D81DB00F1170B /* PasswordTextFieldSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6CA931C6D81DB00F1170B /* PasswordTextFieldSpecs.swift */; };
 		83A6CA951C6D94A800F1170B /* PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */; };
+		83A6CAD21C6DC7BF00F1170B /* BundleUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6CAD11C6DC7BF00F1170B /* BundleUtil.swift */; };
 		83CBDC291C6B07A5006189C2 /* PasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 83CBDC281C6B07A5006189C2 /* PasswordTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83CBDC301C6B07A5006189C2 /* PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */; };
 		83CBDC461C6B07B4006189C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC451C6B07B4006189C2 /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 		839CC8391C6D7F5600531404 /* PasswordRuleSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRuleSpecs.swift; sourceTree = "<group>"; };
 		839CC83C1C6D80B600531404 /* StringExtensionSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionSpecs.swift; sourceTree = "<group>"; };
 		83A6CA931C6D81DB00F1170B /* PasswordTextFieldSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldSpecs.swift; sourceTree = "<group>"; };
+		83A6CAD11C6DC7BF00F1170B /* BundleUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleUtil.swift; sourceTree = "<group>"; };
 		83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PasswordTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CBDC281C6B07A5006189C2 /* PasswordTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
 		83CBDC2A1C6B07A5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +186,14 @@
 			name = SuportingFiles;
 			sourceTree = "<group>";
 		};
+		83A6CAD01C6DC7B200F1170B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				83A6CAD11C6DC7BF00F1170B /* BundleUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		83CBDC1B1C6B07A5006189C2 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +223,7 @@
 		83CBDC271C6B07A5006189C2 /* PasswordTextField */ = {
 			isa = PBXGroup;
 			children = (
+				83A6CAD01C6DC7B200F1170B /* Util */,
 				839CC83E1C6D811600531404 /* SuportingFiles */,
 				839CC8311C6D78D400531404 /* Validations */,
 				839CC8281C6B099600531404 /* Extensions */,
@@ -531,6 +542,7 @@
 				839CC82A1C6B09A400531404 /* StringExtension.swift in Sources */,
 				83CBDC721C6B07C9006189C2 /* PasswordTextField.swift in Sources */,
 				839CC82E1C6C3CB000531404 /* SecureTextToggleButton.swift in Sources */,
+				83A6CAD21C6DC7BF00F1170B /* BundleUtil.swift in Sources */,
 				839CC8371C6D794100531404 /* Ruleable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
