@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/PiXeL16/PasswordTextField.svg?branch=master)](https://travis-ci.org/PiXeL16/PasswordTextField/) [![codecov.io](https://codecov.io/github/PiXeL16/PasswordTextField/coverage.svg?branch=master)](https://codecov.io/github/PiXeL16/PasswordTextField?branch=master) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PasswordTextField.svg)](https://img.shields.io/cocoapods/v/PasswordTextField.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PiXeL16/PasswordTextField/master/LICENSE)
 
 # PasswordTextField
-A custom TextField with a switchable icon which shows or hides the password and enforce good password policies,  written in `Swift`.
+A custom TextField with a switchable icon which shows or hides the password and enforces good password policies,  written in `Swift`.
 
 ![PasswordTextFieldGif](/Web/PasswordTextField.gif)
 
