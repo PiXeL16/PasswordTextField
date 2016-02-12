@@ -1,5 +1,7 @@
 ![PasswordTextFieldBanner](/Art/passwordTextFieldBanner.png)
 
+[![Build Status](https://travis-ci.org/PiXeL16/PasswordTextField.svg?branch=master)](https://travis-ci.org/PiXeL16/PasswordTextField/) [![codecov.io](https://codecov.io/github/PiXeL16/PasswordTextField/coverage.svg?branch=master)](https://codecov.io/github/PiXeL16/PasswordTextField?branch=master) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PasswordTextField.svg)](https://img.shields.io/cocoapods/v/PasswordTextField.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PiXeL16/PasswordTextField/master/LICENSE)
+
 # PasswordTextField
 A custom TextField with a switchable icon which shows or hides the password and enforce good password policies,  written in `Swift`.
 
@@ -49,7 +51,6 @@ import PasswordTextField
 if passwordTextField.isInvalid(){
   print(passwordTextField.errorMessage)
 }
-
 ```
 
 You can also provide your custom password validation format (with Regex) and error message:
@@ -64,5 +65,11 @@ passwordTextField.validationRule = validationRule
 if passwordTextField.isInvalid(){
   print(passwordTextField.errorMessage)
 }
-
 ```
+
+:alien: Author
+------
+Chris Jimenez - http://chrisjimenez.net, [@chrisjimeneznat](http://twitter.com/chrisjimeneznat)
+
+## License
+`PasswordTextField` is released under the MIT license. See [LICENSE](https://github.com/pixel16/PasswordTextField/blob/master/LICENSE) for details.
