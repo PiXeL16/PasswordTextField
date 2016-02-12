@@ -8,7 +8,7 @@ A custom TextField with a switchable icon which shows or hides the password and 
 ![PasswordTextFieldGif](/Web/PasswordTextField.gif)
 
 
-:metal: Features
+:star: Features
 ---
 * Custom toggle icon in IB or programmatically.
 * Custom icon color in IB or programmatically.
@@ -20,11 +20,11 @@ A custom TextField with a switchable icon which shows or hides the password and 
 ---
 Get `PasswordTextField` on CocoaPods, just add `pod 'PasswordTextField'` to your `Podfile` and then run `pod install`.
 
-:computer: Usage
+:metal: Usage
 ---
 1. Open a storyboard or Xib file.
 2. Drag and drop a `UITextField` to a ViewController.
-3. In Identity Inspector, replace the class from `UITextField` to UI `PasswordTextField`
+3. In Identity Inspector, replace the class from `UITextField` to `PasswordTextField`
 [APIs section](https://github.com/JakeLin/IBAnimatable#apis).
 4. Configure your properties in the Attribute Inspector.
 
@@ -66,6 +66,13 @@ if passwordTextField.isInvalid(){
   print(passwordTextField.errorMessage)
 }
 ```
+
+TODO
+-----
+* Show indication when password is strong or weak in TextField
+* Animation when toggling Button
+
+
 
 :alien: Author
 ------
