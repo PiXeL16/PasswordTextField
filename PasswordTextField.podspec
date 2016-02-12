@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/PiXeL16/PasswordTextField.git", :tag => s.version }
-  s.source_files  = "PasswordTextField/", "PasswordTextField/**/*.{h,m,swift,xcassets}"
+  s.source_files  = "PasswordTextField/", "PasswordTextField/**/*.{h,m,swift}"
+  s.resource_bundles = { "PasswordTextField" => [ "PasswordTextField/**/*.xcassets"] }   
 
   s.requires_arc = true
 
