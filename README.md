@@ -25,7 +25,6 @@ Get `PasswordTextField` on CocoaPods, just add `pod 'PasswordTextField'` to your
 1. Open a storyboard or Xib file.
 2. Drag and drop a `UITextField` to a ViewController.
 3. In Identity Inspector, replace the class from `UITextField` to `PasswordTextField`
-[APIs section](https://github.com/JakeLin/IBAnimatable#apis).
 4. Configure your properties in the Attribute Inspector.
 
 ![Screenshot](Web/storyboardScreenshot.png)
