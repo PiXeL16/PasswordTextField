@@ -10,6 +10,10 @@
 		839CC82A1C6B09A400531404 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC8291C6B09A400531404 /* StringExtension.swift */; };
 		839CC82C1C6C1C1900531404 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839CC82B1C6C1C1900531404 /* Media.xcassets */; };
 		839CC82E1C6C3CB000531404 /* SecureTextToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC82D1C6C3CB000531404 /* SecureTextToggleButton.swift */; };
+		839CC8301C6D756300531404 /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC82F1C6D756300531404 /* CustomStyle.swift */; };
+		839CC8331C6D78E000531404 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC8321C6D78E000531404 /* PasswordRule.swift */; };
+		839CC8351C6D791E00531404 /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC8341C6D791E00531404 /* RegexRule.swift */; };
+		839CC8371C6D794100531404 /* Ruleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC8361C6D794100531404 /* Ruleable.swift */; };
 		83CBDC291C6B07A5006189C2 /* PasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 83CBDC281C6B07A5006189C2 /* PasswordTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83CBDC301C6B07A5006189C2 /* PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */; };
 		83CBDC351C6B07A5006189C2 /* PasswordTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC341C6B07A5006189C2 /* PasswordTextFieldTests.swift */; };
@@ -51,6 +55,10 @@
 		839CC8291C6B09A400531404 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		839CC82B1C6C1C1900531404 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		839CC82D1C6C3CB000531404 /* SecureTextToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextToggleButton.swift; sourceTree = "<group>"; };
+		839CC82F1C6D756300531404 /* CustomStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStyle.swift; sourceTree = "<group>"; };
+		839CC8321C6D78E000531404 /* PasswordRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
+		839CC8341C6D791E00531404 /* RegexRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
+		839CC8361C6D794100531404 /* Ruleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruleable.swift; sourceTree = "<group>"; };
 		83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PasswordTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CBDC281C6B07A5006189C2 /* PasswordTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
 		83CBDC2A1C6B07A5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +129,16 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		839CC8311C6D78D400531404 /* Validations */ = {
+			isa = PBXGroup;
+			children = (
+				839CC8321C6D78E000531404 /* PasswordRule.swift */,
+				839CC8341C6D791E00531404 /* RegexRule.swift */,
+				839CC8361C6D794100531404 /* Ruleable.swift */,
+			);
+			name = Validations;
+			sourceTree = "<group>";
+		};
 		83CBDC1B1C6B07A5006189C2 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +166,7 @@
 		83CBDC271C6B07A5006189C2 /* PasswordTextField */ = {
 			isa = PBXGroup;
 			children = (
+				839CC8311C6D78D400531404 /* Validations */,
 				839CC8281C6B099600531404 /* Extensions */,
 				83CBDC281C6B07A5006189C2 /* PasswordTextField.h */,
 				83CBDC2A1C6B07A5006189C2 /* Info.plist */,
@@ -176,6 +195,7 @@
 				83CBDC4C1C6B07B4006189C2 /* Assets.xcassets */,
 				83CBDC4E1C6B07B4006189C2 /* LaunchScreen.storyboard */,
 				83CBDC511C6B07B4006189C2 /* Info.plist */,
+				839CC82F1C6D756300531404 /* CustomStyle.swift */,
 			);
 			path = PasswordTextFieldDemo;
 			sourceTree = "<group>";
@@ -399,9 +419,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839CC8351C6D791E00531404 /* RegexRule.swift in Sources */,
+				839CC8331C6D78E000531404 /* PasswordRule.swift in Sources */,
 				839CC82A1C6B09A400531404 /* StringExtension.swift in Sources */,
 				83CBDC721C6B07C9006189C2 /* PasswordTextField.swift in Sources */,
 				839CC82E1C6C3CB000531404 /* SecureTextToggleButton.swift in Sources */,
+				839CC8371C6D794100531404 /* Ruleable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CBDC481C6B07B4006189C2 /* ViewController.swift in Sources */,
+				839CC8301C6D756300531404 /* CustomStyle.swift in Sources */,
 				83CBDC461C6B07B4006189C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

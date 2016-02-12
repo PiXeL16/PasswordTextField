@@ -18,14 +18,20 @@ public class PasswordTextField: UITextField {
     public enum ShowButtonWhile: String {
         case Editing = "editing"
         case Always = "always"
+        case Never = "never"
         
         var textViewMode: UITextFieldViewMode {
             switch self{
+                
             case .Editing:
                 return UITextFieldViewMode.WhileEditing
             
             case .Always:
                 return UITextFieldViewMode.Always
+                
+            case .Never:
+                return UITextFieldViewMode.Never
+                
             }
         }
     }
@@ -70,7 +76,13 @@ public class PasswordTextField: UITextField {
             
     }
     
+    /// The rule to apply to the validation password rule
+    public var validationRule:RegexRule = PasswordRule()
     
+    
+    /**
+     *  Shows the toggle button while editing, never, or always. The possible values to set are "editing", "never", "always
+     */
     @available(*, unavailable, message="This property is reserved for Interface Builder. Use 'showButtonWhile' instead.")
     @IBInspectable var showToggleButtonWhile: String? {
         willSet {
@@ -79,6 +91,11 @@ public class PasswordTextField: UITextField {
             }
         }
     }
+    
+    /// Convenience var to change teh border width
+    @IBInspectable  dynamic public var borderWidth: CGFloat = 0 { didSet { self.layer.borderWidth = borderWidth } }
+    /// Convenience var to change the corner radius
+    @IBInspectable dynamic public var cornerRadius: CGFloat = 0 { didSet { self.layer.cornerRadius = cornerRadius } }
     
     /**
      The color of the image.
@@ -123,7 +140,6 @@ public class PasswordTextField: UITextField {
         }
     }
     
-    
     /**
      Initialize properties and values
      */
@@ -154,9 +170,9 @@ public class PasswordTextField: UITextField {
     }()
     
     /**
-     Toggle the secure text view
+     Toggle the secure text view or not
      */
-    public func setSecureText(secure:Bool)
+    public func setMode(secure:Bool)
     {
     
         self.resignFirstResponder()
@@ -171,6 +187,32 @@ public class PasswordTextField: UITextField {
         
     }
     
+    /**
+     Checks if the password typed is valid
+     
+     - returns: valid password of not
+     */
+    public func isValid() -> Bool{
+        
+        var returnValue = false
+        
+        if let text = self.text{
+            returnValue = validationRule.validate(text)
+        }
+        
+        return returnValue
+    }
+    
+    /**
+     Returns the error message of the validation rule setted
+     
+     - returns: error message
+     */
+    public func errorMessage() -> String{
+        
+        return validationRule.errorMessage()
+    }
+    
     
     public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         
@@ -179,7 +221,7 @@ public class PasswordTextField: UITextField {
             
             if context == &kvoContext {
                 
-                self.setSecureText(self.secureTextButton.isSecure)
+                self.setMode(self.secureTextButton.isSecure)
                 
                 
             } else {
