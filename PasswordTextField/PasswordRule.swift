@@ -23,7 +23,7 @@ public class PasswordRule : RegexRule {
     
     static let regex = "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z]).{8,}$"
     
-    public convenience init(message : String = "Your password must be at least 8 characters long with and contain one uppercase letter and one number") {
+    public convenience init(message : String = "Your password must be at least 8 characters long and contain one uppercase letter and one number") {
         self.init(regex: PasswordRule.regex, errorMessage : message)
     }
 }

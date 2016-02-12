@@ -77,7 +77,7 @@ public class PasswordTextField: UITextField {
     }
     
     /// The rule to apply to the validation password rule
-    public lazy var validationRule:RegexRule = PasswordRule()
+    public var validationRule:RegexRule = PasswordRule()
     
     
     /**
@@ -201,6 +201,16 @@ public class PasswordTextField: UITextField {
         }
         
         return returnValue
+    }
+    
+    /**
+     Convenience function to check if the validation is invalid
+     
+     - returns: true if the validation is invalid
+     */
+    public func isInvalid() ->Bool {
+        
+        return !isValid()
     }
     
     /**

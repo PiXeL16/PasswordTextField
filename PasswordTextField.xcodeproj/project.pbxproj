@@ -17,6 +17,7 @@
 		839CC83A1C6D7F5600531404 /* PasswordRuleSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC8391C6D7F5600531404 /* PasswordRuleSpecs.swift */; };
 		839CC83D1C6D80B600531404 /* StringExtensionSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CC83C1C6D80B600531404 /* StringExtensionSpecs.swift */; };
 		83A6CA941C6D81DB00F1170B /* PasswordTextFieldSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6CA931C6D81DB00F1170B /* PasswordTextFieldSpecs.swift */; };
+		83A6CA951C6D94A800F1170B /* PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */; };
 		83CBDC291C6B07A5006189C2 /* PasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 83CBDC281C6B07A5006189C2 /* PasswordTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83CBDC301C6B07A5006189C2 /* PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBDC251C6B07A5006189C2 /* PasswordTextField.framework */; };
 		83CBDC461C6B07B4006189C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC451C6B07B4006189C2 /* AppDelegate.swift */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A6CA951C6D94A800F1170B /* PasswordTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

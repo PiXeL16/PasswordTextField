@@ -54,6 +54,23 @@ class PasswordTextFieldSpecs: QuickSpec {
         }
         
         
+        it("validates with custom validator"){
+            
+            let passwordString = "LOVE"
+            
+            passwordTextField.text = passwordString
+            
+            let validationRule = RegexRule(regex:"^[A-Z ]+$", errorMessage: "test")
+            
+            passwordTextField.validationRule = validationRule
+            
+            expect(passwordTextField.isValid()).to(beTrue())
+            expect(passwordTextField.errorMessage()).to(equal("test"))
+            
+        }
+
+        
+        
     }
     
 }
