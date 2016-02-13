@@ -241,7 +241,7 @@ public class PasswordTextField: UITextField {
     }
     
     deinit {
-        self.removeObserver(self, forKeyPath: "isSecure")
+        self.secureTextButton.removeObserver(self, forKeyPath: "isSecure")
     }
     
     
