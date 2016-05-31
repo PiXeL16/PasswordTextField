@@ -18,7 +18,7 @@ A custom TextField with a switchable icon which shows or hides the password and 
 
 :octocat: Installation
 ---
-Get `PasswordTextField` on CocoaPods, just add `pod 'PasswordTextField'` to your `Podfile` and then run `pod install`.
+Get `PasswordTextField` on CocoaPods, just add `pod 'PasswordTextField'` to your `Podfile` and then run `pod install`. You can also add the Github to your `Carthage` file.
 
 :metal: Usage
 ---
