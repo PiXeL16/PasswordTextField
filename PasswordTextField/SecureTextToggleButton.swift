@@ -111,7 +111,7 @@ public class SecureTextToggleButton: UIButton {
         isSecure = true
         
         //Sets the button target
-        self.addTarget(self, action: "buttonTouch", forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: #selector(SecureTextToggleButton.buttonTouch), forControlEvents: .TouchUpInside)
         
     }
     

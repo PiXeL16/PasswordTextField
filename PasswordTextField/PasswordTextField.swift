@@ -24,13 +24,13 @@ public class PasswordTextField: UITextField {
             switch self{
                 
             case .Editing:
-                return UITextFieldViewMode.WhileEditing
+                return .WhileEditing
             
             case .Always:
-                return UITextFieldViewMode.Always
+                return .Always
                 
             case .Never:
-                return UITextFieldViewMode.Never
+                return .Never
                 
             }
         }
