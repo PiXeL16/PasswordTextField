@@ -19,7 +19,32 @@ A custom TextField with a switchable icon which shows or hides the password and 
 
 :octocat: Installation
 ---
-Get `PasswordTextField` on CocoaPods, just add `pod 'PasswordTextField'` to your `Podfile` and then run `pod install`. You can also add the Github to your `Carthage` file.
+
+#### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `PasswordTextField` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+pod 'PasswordTextField'
+```
+
+To get the full benefits import `PasswordTextField` wherever you import UIKit
+
+``` swift
+import UIKit
+import PasswordTextField
+```
+#### Carthage
+Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/PasswordTextField.framework` to an iOS project.
+
+```
+github "PiXeL16/PasswordTextField"
+```
+
+#### Manually
+1. Download and drop ```/PasswordTextField``` folder  in your project.  
+2. Congratulations!  
 
 :metal: Usage
 ---
