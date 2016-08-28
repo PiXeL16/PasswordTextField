@@ -9,12 +9,12 @@
 import Foundation
 
 /// Basic structure that represent a Regex Rule
-public class RegexRule : Ruleable {
+open class RegexRule : Ruleable {
     
     /// Default regex
-    private var REGEX: String = "^(?=.*?[A-Z]).{8,}$"
+    fileprivate var REGEX: String = "^(?=.*?[A-Z]).{8,}$"
     /// Error message
-    private var message : String
+    fileprivate var message : String
     
     
     /**
@@ -37,9 +37,9 @@ public class RegexRule : Ruleable {
      
      - returns: if the rule is valid or not
      */
-    public func validate(value: String) -> Bool {
+    open func validate(_ value: String) -> Bool {
         let test = NSPredicate(format: "SELF MATCHES %@", self.REGEX)
-        return test.evaluateWithObject(value)
+        return test.evaluate(with: value)
     }
     
     /**
@@ -47,7 +47,7 @@ public class RegexRule : Ruleable {
      
      - returns: <#return value description#>
      */
-    public func errorMessage() -> String {
+    open func errorMessage() -> String {
         return message
     }
     

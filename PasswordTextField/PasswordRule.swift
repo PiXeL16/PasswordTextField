@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PasswordRule : RegexRule {
+open class PasswordRule : RegexRule {
     
     // Other Regexes that you can se
     
