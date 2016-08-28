@@ -10,15 +10,15 @@ import Foundation
 
 
 /// The Segure text button toggle shown in the right side of the textfield
-public class SecureTextToggleButton: UIButton {
+open class SecureTextToggleButton: UIButton {
     
     
-    private let RightMargin:CGFloat = 10.0
-    private let Width:CGFloat = 20.0
-    private let Height:CGFloat = 20.0
+    fileprivate let RightMargin:CGFloat = 10.0
+    fileprivate let Width:CGFloat = 20.0
+    fileprivate let Height:CGFloat = 20.0
     
     /// Sets the value for the secure or note secure toggle and
-    dynamic public var isSecure:Bool = true{
+    dynamic open var isSecure:Bool = true{
         
         didSet{
             
@@ -33,20 +33,20 @@ public class SecureTextToggleButton: UIButton {
     }
     
     /// Image to shown when the visibility is on
-    public var showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle:BundleUtil.bundle, compatibleWithTraitCollection: nil)!{
+    open var showSecureTextImage:UIImage = UIImage(named: "visibility_on", in:BundleUtil.bundle, compatibleWith: nil)!{
         
         didSet{
-            self.setImage(showSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
+            self.setImage(showSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
         }
             
     }
     
     /// Image to shown when the visibility is off
-    public var hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle:BundleUtil.bundle, compatibleWithTraitCollection: nil)!
+    open var hideSecureTextImage:UIImage = UIImage(named: "visibility_off", in:BundleUtil.bundle, compatibleWith: nil)!
     
     
     /// Tint of the image
-    public var imageTint:UIColor = UIColor.grayColor(){
+    open var imageTint:UIColor = UIColor.gray{
         didSet{
             self.tintColor = imageTint
         }
@@ -62,9 +62,9 @@ public class SecureTextToggleButton: UIButton {
      
      - returns:
      */
-    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", inBundle:BundleUtil.bundle, compatibleWithTraitCollection: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", inBundle: BundleUtil.bundle, compatibleWithTraitCollection: nil)! , imageTint:UIColor = UIColor.grayColor())
+    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", in:BundleUtil.bundle, compatibleWith: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", in: BundleUtil.bundle, compatibleWith: nil)! , imageTint:UIColor = UIColor.gray)
     {
-        self.init(frame:CGRectZero)
+        self.init(frame:CGRect.zero)
         
         self.showSecureTextImage = showSecureTextImage
         
@@ -104,14 +104,14 @@ public class SecureTextToggleButton: UIButton {
         self.tintColor = imageTint
        
         //Sets the aspect fit of the image
-        self.contentMode = UIViewContentMode.ScaleAspectFit
-        self.backgroundColor = UIColor.clearColor()
+        self.contentMode = UIViewContentMode.scaleAspectFit
+        self.backgroundColor = UIColor.clear
         
         //Initialize the component with the secure state
         isSecure = true
         
         //Sets the button target
-        self.addTarget(self, action: #selector(SecureTextToggleButton.buttonTouch), forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: #selector(SecureTextToggleButton.buttonTouch), for: .touchUpInside)
         
     }
     
@@ -120,7 +120,7 @@ public class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOn()
     {
-        self.setImage(showSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
+        self.setImage(showSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
     }
     
     
@@ -129,13 +129,13 @@ public class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOff()
     {
-        self.setImage(hideSecureTextImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),forState: .Normal)
+        self.setImage(hideSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
     }
     
     /**
      Toggle the icon
      */
-    public func buttonTouch()
+    open func buttonTouch()
     {
         self.isSecure = !self.isSecure
     }
