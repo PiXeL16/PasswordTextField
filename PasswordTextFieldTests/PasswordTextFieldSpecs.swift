@@ -24,16 +24,16 @@ class PasswordTextFieldSpecs: QuickSpec {
             let passwordString = "1234Abcd8988!"
             
             passwordTextField.text = passwordString
-            passwordTextField.imageTintColor = UIColor.redColor()
+            passwordTextField.imageTintColor = UIColor.red
             passwordTextField.setSecureMode(false)
             
             expect(passwordTextField.isValid()).to(beTrue())
             expect(passwordTextField.errorMessage()).toNot(beNil())
             expect(passwordTextField.showButtonWhile).to(equal(PasswordTextField.ShowButtonWhile.Editing))
             
-            expect(passwordTextField.imageTintColor).to(equal(UIColor.redColor()))
-            expect(passwordTextField.secureTextButton.tintColor).to(equal(UIColor.redColor()))
-            expect(passwordTextField.secureTextEntry).to(beFalse())
+            expect(passwordTextField.imageTintColor).to(equal(UIColor.red))
+            expect(passwordTextField.secureTextButton.tintColor).to(equal(UIColor.red))
+            expect(passwordTextField.isSecureTextEntry).to(beFalse())
             
         }
         
@@ -49,7 +49,7 @@ class PasswordTextFieldSpecs: QuickSpec {
             expect(passwordTextField.errorMessage()).toNot(beNil())
             
             expect(passwordTextField.secureTextButton.isSecure).to(beFalse())
-            expect(passwordTextField.secureTextEntry).to(beFalse())
+            expect(passwordTextField.isSecureTextEntry).to(beFalse())
             
         }
         
