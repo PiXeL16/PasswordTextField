@@ -9,10 +9,10 @@
 import UIKit
 
 //  A custom TextField with a switchable icon which shows or hides the password
-public class PasswordTextField: UITextField {
+open class PasswordTextField: UITextField {
     
     //KVO Context
-    private var kvoContext: UInt8 = 0
+    fileprivate var kvoContext: UInt8 = 0
     
     /// Enums with the values of when to show the secure or insecure text button
     public enum ShowButtonWhile: String {
@@ -24,13 +24,13 @@ public class PasswordTextField: UITextField {
             switch self{
                 
             case .Editing:
-                return .WhileEditing
+                return .whileEditing
             
             case .Always:
-                return .Always
+                return .always
                 
             case .Never:
-                return .Never
+                return .never
                 
             }
         }
@@ -68,7 +68,7 @@ public class PasswordTextField: UITextField {
     }
     
     /// When to show the button defaults to only when editing
-    public var showButtonWhile = ShowButtonWhile.Editing{
+    open var showButtonWhile = ShowButtonWhile.Editing{
         
         didSet{
              self.rightViewMode = self.showButtonWhile.textViewMode
@@ -77,32 +77,32 @@ public class PasswordTextField: UITextField {
     }
     
     /// The rule to apply to the validation password rule
-    public var validationRule:RegexRule = PasswordRule()
+    open var validationRule:RegexRule = PasswordRule()
     
     
     /**
      *  Shows the toggle button while editing, never, or always. The possible values to set are "editing", "never", "always
      */
-    @available(*, unavailable, message="This property is reserved for Interface Builder. Use 'showButtonWhile' instead.")
+    @available(*, unavailable, message: "This property is reserved for Interface Builder. Use 'showButtonWhile' instead.")
     @IBInspectable var showToggleButtonWhile: String? {
         willSet {
-            if let newShow = ShowButtonWhile(rawValue: newValue?.lowercaseString ?? "") {
+            if let newShow = ShowButtonWhile(rawValue: newValue?.lowercased() ?? "") {
                 self.showButtonWhile = newShow
             }
         }
     }
     
     /// Convenience var to change teh border width
-    @IBInspectable  dynamic public var borderWidth: CGFloat = 0 { didSet { self.layer.borderWidth = borderWidth } }
+    @IBInspectable  dynamic open var borderWidth: CGFloat = 0 { didSet { self.layer.borderWidth = borderWidth } }
     /// Convenience var to change the corner radius
-    @IBInspectable dynamic public var cornerRadius: CGFloat = 0 { didSet { self.layer.cornerRadius = cornerRadius } }
+    @IBInspectable dynamic open var cornerRadius: CGFloat = 0 { didSet { self.layer.cornerRadius = cornerRadius } }
     
     /**
      The color of the image.
      
      This property applies a color to the image. The default value for this property is gray.
      */
-    @IBInspectable public var imageTintColor: UIColor = UIColor.grayColor() {
+    @IBInspectable open var imageTintColor: UIColor = UIColor.gray {
         didSet {
             
             self.secureTextButton.tintColor = imageTintColor
@@ -113,7 +113,7 @@ public class PasswordTextField: UITextField {
     /**
      The image to show the secure text
      */
-    @IBInspectable public var customShowSecureTextImage: UIImage? {
+    @IBInspectable open var customShowSecureTextImage: UIImage? {
         
         didSet{
             
@@ -128,7 +128,7 @@ public class PasswordTextField: UITextField {
     /**
      The image to hide the secure text
      */
-    @IBInspectable public var customHideSecureTextImage: UIImage? {
+    @IBInspectable open var customHideSecureTextImage: UIImage? {
         
         didSet{
             
@@ -145,25 +145,25 @@ public class PasswordTextField: UITextField {
      */
     func setup()
     {
-        self.secureTextEntry = true
-        self.autocapitalizationType = .None
-        self.autocorrectionType = .No
-        self.keyboardType = .ASCIICapable
+        self.isSecureTextEntry = true
+        self.autocapitalizationType = .none
+        self.autocorrectionType = .no
+        self.keyboardType = .asciiCapable
         self.rightViewMode = self.showButtonWhile.textViewMode
         self.rightView = self.secureTextButton
         
-        self.secureTextButton.addObserver(self, forKeyPath: "isSecure", options: NSKeyValueObservingOptions.New, context: &kvoContext)
+        self.secureTextButton.addObserver(self, forKeyPath: "isSecure", options: NSKeyValueObservingOptions.new, context: &kvoContext)
     }
     
     
     /// retuns if the textfield is secure or not
-    public var isSecure: Bool{
+    open var isSecure: Bool{
         get{
-            return secureTextEntry
+            return isSecureTextEntry
         }
     }
     
-    public lazy var secureTextButton: SecureTextToggleButton = {
+    open lazy var secureTextButton: SecureTextToggleButton = {
         
         return SecureTextToggleButton(imageTint: self.imageTintColor)
         
@@ -172,11 +172,11 @@ public class PasswordTextField: UITextField {
     /**
      Toggle the secure text view or not
      */
-    public func setSecureMode(secure:Bool)
+    open func setSecureMode(_ secure:Bool)
     {
     
         self.resignFirstResponder()
-        self.secureTextEntry = secure
+        self.isSecureTextEntry = secure
         
         /// Kind of ugly hack to make the text refresh after the toggle. The size of the secure fonts are different than the normal ones and it shows trailing white space
         let tempText = self.text;
@@ -192,7 +192,7 @@ public class PasswordTextField: UITextField {
      
      - returns: valid password of not
      */
-    public func isValid() -> Bool{
+    open func isValid() -> Bool{
         
         var returnValue = false
         
@@ -208,7 +208,7 @@ public class PasswordTextField: UITextField {
      
      - returns: true if the validation is invalid
      */
-    public func isInvalid() ->Bool {
+    open func isInvalid() ->Bool {
         
         return !isValid()
     }
@@ -218,16 +218,15 @@ public class PasswordTextField: UITextField {
      
      - returns: error message
      */
-    public func errorMessage() -> String{
+    open func errorMessage() -> String{
         
         return validationRule.errorMessage()
     }
     
     
-    public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         if context == &kvoContext {
-            
             
             if context == &kvoContext {
                 
@@ -235,7 +234,7 @@ public class PasswordTextField: UITextField {
                 
                 
             } else {
-                super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+                super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
             }
         }
     }

@@ -12,6 +12,6 @@ import Foundation
  *  Protocol that represent something that conforms to a Rule
  */
 public protocol Ruleable {
-    func validate(value: String) -> Bool
+    func validate(_ value: String) -> Bool
     func errorMessage() -> String
 }

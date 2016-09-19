@@ -19,7 +19,7 @@ target 'PasswordTextField' do
 
   target 'PasswordTextFieldTests' do
     inherit! :search_paths
-    pod 'Quick', :git => 'https://github.com/Quick/Quick.git' , :branch => 'swift-3.0'
+     pod 'Quick', :git => 'https://github.com/Quick/Quick.git' , :branch => 'swift-3.0'
     pod 'Nimble', :git => 'https://github.com/Quick/Nimble.git', :commit => 'db706fc'
   end
 
