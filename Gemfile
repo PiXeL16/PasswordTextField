@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # The Cocoa library package manager.
 gem 'cocoapods', :git => 'https://github.com/CocoaPods/CocoaPods.git', :tag => '1.1.0.rc.2'
