@@ -35,8 +35,6 @@
 		83CBDC4B1C6B07B4006189C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CBDC491C6B07B4006189C2 /* Main.storyboard */; };
 		83CBDC4D1C6B07B4006189C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CBDC4C1C6B07B4006189C2 /* Assets.xcassets */; };
 		83CBDC501C6B07B4006189C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CBDC4E1C6B07B4006189C2 /* LaunchScreen.storyboard */; };
-		83CBDC5B1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC5A1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift */; };
-		83CBDC661C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC651C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift */; };
 		83CBDC721C6B07C9006189C2 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDC711C6B07C9006189C2 /* PasswordTextField.swift */; };
 		8DAD7C48DDFCC898F088F027 /* Pods_PasswordTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E05EFDA6B8A6B9ABAB6F3F /* Pods_PasswordTextField.framework */; };
 		9F3AA550B7316B82126060DE /* Pods_PasswordTextFieldDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC8548427014CCFB06FE43A /* Pods_PasswordTextFieldDemoUITests.framework */; };
@@ -104,10 +102,8 @@
 		83CBDC4F1C6B07B4006189C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83CBDC511C6B07B4006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CBDC561C6B07B4006189C2 /* PasswordTextFieldDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTextFieldDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83CBDC5A1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDemoTests.swift; sourceTree = "<group>"; };
 		83CBDC5C1C6B07B5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CBDC611C6B07B5006189C2 /* PasswordTextFieldDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTextFieldDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83CBDC651C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDemoUITests.swift; sourceTree = "<group>"; };
 		83CBDC671C6B07B5006189C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CBDC711C6B07C9006189C2 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		95C106D8138233173A814CA7 /* Pods_PasswordTextFieldDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordTextFieldDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,7 +332,6 @@
 		83CBDC591C6B07B4006189C2 /* PasswordTextFieldDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				83CBDC5A1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift */,
 				83CBDC5C1C6B07B5006189C2 /* Info.plist */,
 			);
 			path = PasswordTextFieldDemoTests;
@@ -345,7 +340,6 @@
 		83CBDC641C6B07B5006189C2 /* PasswordTextFieldDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				83CBDC651C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift */,
 				83CBDC671C6B07B5006189C2 /* Info.plist */,
 			);
 			path = PasswordTextFieldDemoUITests;
@@ -475,7 +469,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Chris Jimenez";
 				TargetAttributes = {
 					83CBDC241C6B07A5006189C2 = {
@@ -842,7 +836,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CBDC5B1C6B07B5006189C2 /* PasswordTextFieldDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,7 +843,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CBDC661C6B07B5006189C2 /* PasswordTextFieldDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,14 +894,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -938,6 +936,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -952,14 +951,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -981,6 +986,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1005,7 +1011,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1025,7 +1031,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1039,7 +1045,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1052,7 +1058,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1065,7 +1071,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1078,7 +1084,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
