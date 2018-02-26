@@ -18,7 +18,7 @@ open class SecureTextToggleButton: UIButton {
     fileprivate let Height:CGFloat = 20.0
     
     /// Sets the value for the secure or note secure toggle and
-    dynamic open var isSecure:Bool = true{
+    @objc dynamic open var isSecure:Bool = true{
         
         didSet{
             
@@ -135,7 +135,7 @@ open class SecureTextToggleButton: UIButton {
     /**
      Toggle the icon
      */
-    open func buttonTouch()
+    @objc open func buttonTouch()
     {
         self.isSecure = !self.isSecure
     }
