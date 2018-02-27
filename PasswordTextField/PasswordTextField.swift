@@ -148,7 +148,8 @@ open class PasswordTextField: UITextField {
         self.isSecureTextEntry = true
         self.autocapitalizationType = .none
         self.autocorrectionType = .no
-        self.keyboardType = .asciiCapable
+        // Note from Camilo -> Removing so it can be set from XIB
+        //self.keyboardType = .asciiCapable
         self.rightViewMode = self.showButtonWhile.textViewMode
         self.rightView = self.secureTextButton
         
