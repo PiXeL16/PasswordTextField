@@ -174,16 +174,18 @@ open class PasswordTextField: UITextField {
      */
     open func setSecureMode(_ secure:Bool)
     {
-    
-        self.resignFirstResponder()
+
+        // Note by Camilo: it cause weird animation.
+        //self.resignFirstResponder()
         self.isSecureTextEntry = secure
         
         /// Kind of ugly hack to make the text refresh after the toggle. The size of the secure fonts are different than the normal ones and it shows trailing white space
         let tempText = self.text;
         self.text = " ";
         self.text = tempText;
-        
-        self.becomeFirstResponder()
+
+        // Note by Camilo: it cause weird animation.
+        //self.becomeFirstResponder()
         
     }
     
