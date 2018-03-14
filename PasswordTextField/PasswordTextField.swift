@@ -148,7 +148,8 @@ open class PasswordTextField: UITextField {
         self.isSecureTextEntry = true
         self.autocapitalizationType = .none
         self.autocorrectionType = .no
-        self.keyboardType = .asciiCapable
+        // Note from Camilo -> Removing so it can be set from XIB
+        //self.keyboardType = .asciiCapable
         self.rightViewMode = self.showButtonWhile.textViewMode
         self.rightView = self.secureTextButton
         
@@ -174,16 +175,18 @@ open class PasswordTextField: UITextField {
      */
     open func setSecureMode(_ secure:Bool)
     {
-    
-        self.resignFirstResponder()
+
+        // Note by Camilo: it cause weird animation.
+        //self.resignFirstResponder()
         self.isSecureTextEntry = secure
         
         /// Kind of ugly hack to make the text refresh after the toggle. The size of the secure fonts are different than the normal ones and it shows trailing white space
         let tempText = self.text;
         self.text = " ";
         self.text = tempText;
-        
-        self.becomeFirstResponder()
+
+        // Note by Camilo: it cause weird animation.
+        //self.becomeFirstResponder()
         
     }
     
