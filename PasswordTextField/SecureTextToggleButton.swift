@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import QuartzCore
 
 
 /// The Segure text button toggle shown in the right side of the textfield
@@ -96,7 +97,6 @@ open class SecureTextToggleButton: UIButton {
      */
     func setup()
     {
-        
         //Initialize the frame and adds a right margin
         self.frame = CGRect(x: 0, y: -0, width: showSecureTextImage.size.width+RightMargin, height: showSecureTextImage.size.height)
         
@@ -112,7 +112,6 @@ open class SecureTextToggleButton: UIButton {
         
         //Sets the button target
         self.addTarget(self, action: #selector(SecureTextToggleButton.buttonTouch), for: .touchUpInside)
-        
     }
     
     /**
@@ -120,6 +119,17 @@ open class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOn()
     {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {() -> Void in
+            self.alpha = 0.1
+        }, completion: {(_ finished: Bool) -> Void in
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {() -> Void in
+                self.alpha = 1
+            }, completion: {(_ finished: Bool) -> Void in
+                UIView.transition(with: self, duration: 0.25, options: [.transitionFlipFromBottom, .curveEaseInOut], animations: {() -> Void in
+                }, completion: nil)
+            })
+        })
+        
         self.setImage(showSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
     }
     
@@ -129,6 +139,9 @@ open class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOff()
     {
+        UIView.transition(with: self, duration: 0.25, options: [.transitionFlipFromTop], animations: {() -> Void in
+        }, completion: nil)
+        
         self.setImage(hideSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
     }
     
@@ -137,9 +150,19 @@ open class SecureTextToggleButton: UIButton {
      */
     @objc open func buttonTouch()
     {
+//        //for zoom in
+//        UIView.animate(withDuration: 0.5, animations: {() -> Void in
+//                self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+//            }, completion: {(_ finished: Bool) -> Void in
+//        })
+//        // for zoom out
+//        UIView.animate(withDuration: 0.5, animations: {() -> Void in
+//                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+//            }, completion: {(_ finished: Bool) -> Void in
+//        })
+        
         self.isSecure = !self.isSecure
     }
-    
 }
 
 
