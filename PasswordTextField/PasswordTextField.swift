@@ -20,7 +20,7 @@ open class PasswordTextField: UITextField {
         case Always = "always"
         case Never = "never"
         
-        var textViewMode: UITextFieldViewMode {
+        var textViewMode: UITextField.ViewMode {
             switch self{
                 
             case .Editing:
