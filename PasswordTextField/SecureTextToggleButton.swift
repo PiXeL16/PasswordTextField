@@ -36,7 +36,7 @@ open class SecureTextToggleButton: UIButton {
     open var showSecureTextImage:UIImage = UIImage(named: "visibility_on", in:BundleUtil.bundle, compatibleWith: nil)!{
         
         didSet{
-            self.setImage(showSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
+            self.setImage(showSecureTextImage.withRenderingMode(UIImage.RenderingMode.alwaysTemplate),for: UIControl.State())
         }
             
     }
@@ -104,7 +104,7 @@ open class SecureTextToggleButton: UIButton {
         self.tintColor = imageTint
        
         //Sets the aspect fit of the image
-        self.contentMode = UIViewContentMode.scaleAspectFit
+        self.contentMode = UIView.ContentMode.scaleAspectFit
         self.backgroundColor = UIColor.clear
         
         //Initialize the component with the secure state
@@ -120,7 +120,7 @@ open class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOn()
     {
-        self.setImage(showSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
+        self.setImage(showSecureTextImage.withRenderingMode(UIImage.RenderingMode.alwaysTemplate),for: UIControl.State())
     }
     
     
@@ -129,7 +129,7 @@ open class SecureTextToggleButton: UIButton {
      */
     func setVisibilityOff()
     {
-        self.setImage(hideSecureTextImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate),for: UIControlState())
+        self.setImage(hideSecureTextImage.withRenderingMode(UIImage.RenderingMode.alwaysTemplate),for: UIControl.State())
     }
     
     /**

@@ -64,3 +64,4 @@ fastlane/screenshots
 
 
 *.DS_Store
+IDEWorkspaceChecks.plist
