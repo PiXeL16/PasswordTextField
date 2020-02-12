@@ -98,7 +98,7 @@ open class SecureTextToggleButton: UIButton {
     {
         
         //Initialize the frame and adds a right margin
-        self.frame = CGRect(x: 0, y: -0, width: showSecureTextImage.size.width+RightMargin, height: showSecureTextImage.size.height)
+        self.frame = CGRect(x: 10, y: -0, width: showSecureTextImage.size.width+RightMargin, height: showSecureTextImage.size.height)
         
         //Sets the tint color
         self.tintColor = imageTint
