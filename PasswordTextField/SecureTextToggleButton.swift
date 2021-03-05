@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 /// The Segure text button toggle shown in the right side of the textfield
 open class SecureTextToggleButton: UIButton {
