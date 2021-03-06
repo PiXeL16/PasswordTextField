@@ -22,6 +22,7 @@ let package = Package(
             name: "PasswordTextField",
             dependencies: [],
             path: "PasswordTextField",
+            exclude: ["BundleUtil.swift", "Info.plist"],
             resources: [.process("Media")]),
     ]
 )
