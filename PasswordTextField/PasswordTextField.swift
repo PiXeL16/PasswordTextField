@@ -83,7 +83,7 @@ open class PasswordTextField: UITextField {
     /**
      *  Shows the toggle button while editing, never, or always. The possible values to set are "editing", "never", "always
      */
-    @available(*, unavailable, message: "This property is reserved for Interface Builder. Use 'showButtonWhile' instead.")
+    @available(*, message: "This property is reserved for Interface Builder. Use 'showButtonWhile' instead.")
     @IBInspectable var showToggleButtonWhile: String? {
         willSet {
             if let newShow = ShowButtonWhile(rawValue: newValue?.lowercased() ?? "") {
