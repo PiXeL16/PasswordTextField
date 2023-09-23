@@ -374,7 +374,6 @@
 				83CBDC211C6B07A5006189C2 /* Frameworks */,
 				83CBDC221C6B07A5006189C2 /* Headers */,
 				83CBDC231C6B07A5006189C2 /* Resources */,
-				81C631307E9155B7AE864AE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -394,7 +393,6 @@
 				83CBDC2C1C6B07A5006189C2 /* Frameworks */,
 				83CBDC2D1C6B07A5006189C2 /* Resources */,
 				5D9702E29321AF404C3E1044 /* [CP] Embed Pods Frameworks */,
-				305F23D5E66EA76D61256008 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -414,8 +412,6 @@
 				83CBDC3F1C6B07B4006189C2 /* Sources */,
 				83CBDC401C6B07B4006189C2 /* Frameworks */,
 				83CBDC411C6B07B4006189C2 /* Resources */,
-				08CFB379BC7F815AB4ED89F4 /* [CP] Embed Pods Frameworks */,
-				B89C8011FF7BBF05110D989A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -434,8 +430,6 @@
 				83CBDC521C6B07B4006189C2 /* Sources */,
 				83CBDC531C6B07B4006189C2 /* Frameworks */,
 				83CBDC541C6B07B4006189C2 /* Resources */,
-				2C568F2F667AF065A52CB6BD /* [CP] Embed Pods Frameworks */,
-				79C5573C50DA0B6E58990D11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -455,8 +449,6 @@
 				83CBDC5D1C6B07B5006189C2 /* Sources */,
 				83CBDC5E1C6B07B5006189C2 /* Frameworks */,
 				83CBDC5F1C6B07B5006189C2 /* Resources */,
-				C92757998D03F23FE309CC7F /* [CP] Embed Pods Frameworks */,
-				EBF77ED6073E59619E93690D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -505,6 +497,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -570,51 +563,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08CFB379BC7F815AB4ED89F4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldDemo/Pods-PasswordTextFieldDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2C568F2F667AF065A52CB6BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldDemoTests/Pods-PasswordTextFieldDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		305F23D5E66EA76D61256008 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldTests/Pods-PasswordTextFieldTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4A68E2733377810AF9CA9E2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -657,7 +605,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldTests/Pods-PasswordTextFieldTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PasswordTextFieldTests/Pods-PasswordTextFieldTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -668,7 +616,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldTests/Pods-PasswordTextFieldTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PasswordTextFieldTests/Pods-PasswordTextFieldTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F4BC36D4A5E5EE50EDD4AF9 /* [CP] Check Pods Manifest.lock */ = {
@@ -707,21 +655,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		79C5573C50DA0B6E58990D11 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldDemoTests/Pods-PasswordTextFieldDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7E1B4F4D897502BAAE2D3036 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -738,66 +671,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		81C631307E9155B7AE864AE5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextField/Pods-PasswordTextField-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B89C8011FF7BBF05110D989A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldDemo/Pods-PasswordTextFieldDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C92757998D03F23FE309CC7F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldDemoUITests/Pods-PasswordTextFieldDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EBF77ED6073E59619E93690D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordTextFieldDemoUITests/Pods-PasswordTextFieldDemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1017,13 +890,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PasswordTextField/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1040,12 +914,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PasswordTextField/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1056,12 +931,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PasswordTextFieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1072,11 +948,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PasswordTextFieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1086,10 +963,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PasswordTextFieldDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1099,10 +977,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PasswordTextFieldDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1112,9 +991,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PasswordTextFieldDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordTextFieldDemo.app/PasswordTextFieldDemo";
 			};
 			name = Debug;
@@ -1125,9 +1006,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PasswordTextFieldDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordTextFieldDemo.app/PasswordTextFieldDemo";
 			};
 			name = Release;
@@ -1137,9 +1020,11 @@
 			baseConfigurationReference = 04B98E6EFFA352C7A5D7C9A8 /* Pods-PasswordTextFieldDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PasswordTextFieldDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = PasswordTextFieldDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -1150,9 +1035,11 @@
 			baseConfigurationReference = 5A8EA39E69D4F0B5D11C073C /* Pods-PasswordTextFieldDemoUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PasswordTextFieldDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenpixels.PasswordTextFieldDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = PasswordTextFieldDemo;
 				USES_XCTRUNNER = YES;
 			};
