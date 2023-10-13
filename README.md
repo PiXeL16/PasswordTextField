@@ -1,13 +1,13 @@
-![PasswordTextFieldBanner](/Art/passwordTextFieldBanner.png)
+![PasswordTextFieldBanner](Art/passwordTextFieldBanner.png)
 
-[![Build Status](https://travis-ci.org/PiXeL16/PasswordTextField.svg?branch=master)](https://travis-ci.org/PiXeL16/PasswordTextField/) [![codecov.io](https://codecov.io/github/PiXeL16/PasswordTextField/coverage.svg?branch=master)](https://codecov.io/github/PiXeL16/PasswordTextField?branch=master) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PasswordTextField.svg)](https://img.shields.io/cocoapods/v/PasswordTextField.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Build Status](https://travis-ci.org/PiXeL16/PasswordTextField.svg?branch=master)](https://travis-ci.org/PiXeL16/PasswordTextField/) [![codecov.io](https://codecov.io/github/PiXeL16/PasswordTextField/coverage.svg?branch=master)](https://codecov.io/github/PiXeL16/PasswordTextField?branch=master) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PasswordTextField.svg)](https://img.shields.io/cocoapods/v/PasswordTextField.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)]
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/matteocrippa/awesome-swift) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PiXeL16/PasswordTextField/master/LICENSE)
 [![Language](https://img.shields.io/badge/language-Swift%205.0-orange.svg)](https://swift.org)
 
 # PasswordTextField
 A custom TextField with a switchable icon which shows or hides the password and enforces good password policies,  written in `Swift`.
 
-![PasswordTextFieldGif](/Web/PasswordTextField.gif)
+![PasswordTextFieldGif](Web/PasswordTextField.gif)
 
 
 :star: Features
@@ -42,6 +42,16 @@ Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follo
 ```
 github "PiXeL16/PasswordTextField"
 ```
+
+### Swift Package Manager
+
+**NOTE**: _These instructions are intended for usage on Xcode 11 and higher. Xcode 11 is the first version of Xcode that integrates Swift Package Manager and makes it way easier to use than it was at the command line. If you are using older versions of Xcode, we recommend using CocoaPods._
+
+1. Go to File > Swift Packages > Add Package Dependency...
+2. Paste the URL to the `PasswordTextField` repo on GitHub (https://github.com/PiXeL16/PasswordTextField.git) into the search bar, then hit the Next button:
+3. Select the latest version and then hit next (Xcode will automatically suggest the current version Up to Next Major).
+4. Select the `PasswordTextField` library and then hit finish.
+5. You're done!
 
 #### Manually
 1. Download and drop ```/PasswordTextField``` folder  in your project.  
