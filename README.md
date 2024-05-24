@@ -21,6 +21,11 @@ A custom TextField with a switchable icon which shows or hides the password and 
 :octocat: Installation
 ---
 
+#### Swift Package Manager (SPM)
+
+1. In Xcode 11+ select *File > Packages > Add Package Dependency...*.
+2. Enter this project's URL: https://github.com/PiXeL16/PasswordTextField
+
 #### CocoaPods
 You can use [CocoaPods](http://cocoapods.org/) to install `PasswordTextField` by adding it to your `Podfile`:
 
