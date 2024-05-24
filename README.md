@@ -30,7 +30,7 @@ A custom TextField with a switchable icon which shows or hides the password and 
 You can use [CocoaPods](http://cocoapods.org/) to install `PasswordTextField` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '8.0'
+platform :ios, '12.0'
 use_frameworks!
 pod 'PasswordTextField'
 ```
